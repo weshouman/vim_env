@@ -1,0 +1,30 @@
+---
+# tasks file for vim-preparer
+- name: VIM-Env-Wrapper
+  block:
+    - name: Install vim
+      package:
+        name: vim
+        state: present
+
+    - include_tasks: git.yml
+      when: install_prosession or install_ack or install_secure_modelines
+
+    - include_tasks: vim-obsession.yml
+      when: install_prosession == true
+
+    - include_tasks: vim-prosession.yml
+      when: install_prosession == true
+
+    - include_tasks: ack.yml
+      when: install_ack == true
+
+    - include_tasks: vim-ack.yml
+      when: install_ack == true
+
+    - include_tasks: vim-secure-modelines.yml
+      when: install_secure_modelines == true
+
+    - include_tasks: vim-custom.yml
+      when: custom_scripts is defined
+

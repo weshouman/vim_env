@@ -1,0 +1,28 @@
+" vim: set syntax=vim
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+" use by typing :w!!
+" follow https://stackoverflow.com/a/7078429
+cmap w!! w !sudo tee > /dev/null %
+
+" Tab management
+" Guide: https://www.techrepublic.com/blog/linux-and-open-source/use-tabs-to-open-multiple-files-in-vim/
+" Source: https://superuser.com/a/1372732/682757
+" tab navigation: Alt or Ctrl+Shift may not work in terminal:
+" http://vim.wikia.com/wiki/Alternative_tab_navigation
+" Tab navigation like Firefox: only 'open new tab' works in terminal
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-t>     <Esc>:tabnew<CR>
+" move to the previous/next tabpage.
+nnoremap <C-j> gT
+nnoremap <C-k> gt
+" Go to last active tab 
+au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <silent> <c-n> :exe "tabn ".g:lasttab<cr>
+vnoremap <silent> <c-n> :exe "tabn ".g:lasttab<cr>
+
+map <C-h> :tabrewind<cr>
+map <C-l> :tablast<cr>
+
+map <C-x> :tabclose<cr>
+

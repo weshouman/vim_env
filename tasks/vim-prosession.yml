@@ -1,0 +1,10 @@
+---
+- git:
+    repo: https://github.com/dhruvasagar/vim-prosession.git
+    dest: ~/.vim/plugin/vim-prosession
+
+- name:  "Setup Prosession docs"
+  shell: vim -u NONE -c "helptags vim-prosession/doc" -c q
+  args:
+    chdir: ~/.vim/plugin
+

@@ -1,0 +1,33 @@
+" vim: set syntax=vim
+
+" Show tabs and spaces, follow https://vi.stackexchange.com/a/430
+set list
+" short for set listchars
+set lcs=tab:␉─,trail:␠,nbsp:⎵
+
+set nu
+set rnu
+
+set tabstop=3
+
+let g:secure_modelines_allowed_items = [
+            \ "syntax",
+            \ "textwidth",   "tw",
+            \ "softtabstop", "sts",
+            \ "tabstop",     "ts",
+            \ "shiftwidth",  "sw",
+            \ "expandtab",   "et",   "noexpandtab", "noet",
+            \ "filetype",    "ft",
+            \ "foldmethod",  "fdm",
+            \ "readonly",    "ro",   "noreadonly", "noro",
+            \ "rightleft",   "rl",   "norightleft", "norl",
+            \ "spell",
+            \ "spelllang"
+            \ ]
+
+
+" Show file options above the command line
+" For fuzzy searching multiple files
+" Follow https://gist.github.com/csswizardry/9a33342dace4786a9fee35c73fa5deeb
+set wildmenu
+

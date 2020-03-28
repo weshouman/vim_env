@@ -1,0 +1,10 @@
+---
+- git:
+    repo: https://github.com/mileszs/ack.vim.git
+    dest: ~/.vim/plugin/vim-ack
+
+- name:  "Setup Ack docs"
+  shell: vim -u NONE -c "helptags vim-ack/doc" -c q
+  args:
+    chdir: ~/.vim/plugin
+

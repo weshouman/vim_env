@@ -1,0 +1,10 @@
+---
+- git:
+    repo: https://github.com/tpope/vim-obsession.git
+    dest: ~/.vim/plugin/vim-obsession
+
+- name:  "Setup Obsession docs"
+  shell: vim -u NONE -c "helptags vim-obsession/doc" -c q
+  args:
+    chdir: ~/.vim/plugin
+

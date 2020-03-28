@@ -1,0 +1,16 @@
+---
+# side effects: git will be installed if it wasn't
+
+# Obsession wrapper that automagically save the vim state
+install_prosession: true
+
+# Ack search inside vim
+# side effects: installs ack
+install_ack: true
+
+install_secure_modelines: true
+
+# Leave empty to not use any
+custom_scripts:
+  - custom.vim
+  - shortcuts.vim

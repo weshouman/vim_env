@@ -1,0 +1,7 @@
+---
+- name: Copy custom scripts.
+  template:
+    src: "{{ item }}.j2"
+    dest: "~/.vim/plugin/{{ item }}"
+    mode: 0755
+  with_items: "{{ custom_scripts }}"
