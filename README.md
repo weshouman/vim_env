@@ -13,8 +13,8 @@ Role Variables
 
 ```install_prosession```:      (TRUE/false) to install vim-prosession  
 ```install_ack```:             (TRUE/false) to install vim-ack  
-```install_secure_modelines``: (TRUE/false) to install vim-secure-modelines  
-```custom_scripts``:           [] to copy the mentioned scripts  
+```install_secure_modelines```: (TRUE/false) to install vim-secure-modelines  
+```custom_scripts```:           [] to copy the mentioned scripts  
 
 A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
