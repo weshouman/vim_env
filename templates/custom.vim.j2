@@ -16,7 +16,18 @@ set lcs=tab:␉─,trail:␠,nbsp:⎵
 set nu
 set rnu
 
-set tabstop=3
+
+" For the difference between set and let and different types of vars
+"   Follow https://learnvimscriptthehardway.stevelosh.com/chapters/19.html
+" For a list of vars that should be changed for the tabstop to be set correctly
+"   Follow https://vi.stackexchange.com/q/13080/27462
+let tablen=3
+let &tabstop=tablen
+let &softtabstop=tablen
+let &shiftwidth=tablen
+
+" Use the following to disable tabs, and only use spaces
+" set expandtab
 
 let g:secure_modelines_allowed_items = [
             \ "syntax",
